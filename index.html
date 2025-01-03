@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randomizer Wheel</title>
+
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 100px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-image: url("data:image/jpeg;base64,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");
+}
+#messages {
+    height: 50px; border: 1px solid #ccc; padding: 10px; overflow-y: scroll; margin-bottom: 10px; background-color: #f9f9f9
+}
+#output {
+    height: 20px; border: 1px solid #000000; padding: 10px; margin-bottom: 10px; background-color: #f9f9f9
+}
+input {
+    padding: 40px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+p {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Random Object Picker plus</h1>
+        <div id="chatbox">
+            <div id="messages"></div>
+            <input type="text" id="userInput" placeholder="Enter one object once"> 
+        <br><button id="sendButton">Input!</button>
+        <br><button id="pickButton">Pick Random!</button>
+        <br><button id="resetButton">Reset</button>
+        </div>
+        <p id="output"></p>
+    </div>
+    <script>
+        document.getElementById('sendButton').addEventListener('click', function() {
+            const userInput = document.getElementById('userInput').value;
+            const messages = document.getElementById('messages');
+        if (userInput.trim() !== '') {
+        // Create a new message element
+            const messageElement = document.createElement('div');
+            messageElement.textContent = userInput;
+            messages.appendChild(messageElement);
+            userInputs.push(userInput);
+        // Clear the input field
+        document.getElementById('userInput').value='';
+
+        // Scroll to the bottom of the messages container
+        messages.scrollTop = messages.scrollHeight;
+    }
+});
+        document.getElementById('pickButton').addEventListener('click', function() { 
+            const output = document.getElementById('output');
+            if (clickCount == 0){
+                output.textContent = `Randomly picked item: ${userInputs[0]}`;
+            }
+            else if (userInputs.length > 0) {
+                const randomIndex = Math.floor(Math.random() * userInputs.length);
+                const randomItem = userInputs[randomIndex];
+
+                output.textContent = `Randomly picked item: ${randomItem}`;
+            } else {
+                output.textContent = 'No items to pick from!'
+            }
+            clickCount++;
+        });
+        document.getElementById('resetButton').addEventListener('click', function() { 
+            userInputs.length = 0;
+            document.getElementById('messages').innerHTML = ''
+            document.getElementById('output').textContent = ''
+            clickCount = 0;
+        });
+        const userInputs = [];
+        let clickCount = 0;
+        </script>
+</body>
+</html>
